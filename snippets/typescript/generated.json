@@ -1,0 +1,210 @@
+{
+  "Jest Test complete": {
+    "key": "jestTestComplete",
+    "prefix": "teste",
+    "body": [
+      "describe('${1}', () => {",
+      "  it('${2}', () => {",
+      "    ${3}",
+      "  })",
+      "})",
+      ""
+    ],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact",
+    "description": "A describe block for jest"
+  },
+  "Jest Test": {
+    "key": "jestTest",
+    "prefix": "it",
+    "body": [
+      "  it('${1}',${2} () => {",
+      "    ${3}",
+      "  })",
+      ""
+    ],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact",
+    "description": "A describe block for jest"
+  },
+  "styles": {
+    "prefix": "styled-react",
+    "body": [
+      "import styled from 'styled-components';",
+      "",
+      "export const ${1:Container} = styled.${2:div}`",
+      "  ${3}",
+      "`;",
+      ""
+    ],
+    "description": "Create ReactJS Styled Components file",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+
+  "componentFunctionalTypescript": {
+    "prefix": "rfcs",
+    "body": [
+      "import { Container } from './styled';",
+      "",
+      "const ${1}: React.FC = () => {",
+      " return (",
+      "   <Container>",
+      "     ${1}",
+      "   </Container>",
+      " );",
+      "}",
+      "",
+      "export default ${1};"
+    ],
+    "description": "Create ReactJS Functional Component Typescript",
+    "scope": "typescript,typescriptreact"
+  },
+    "Basic React Native Component": {
+    "prefix": "rnbc",
+    "body": [
+      "import React from 'react';",
+      "import { View } from 'react-native';",
+      "",
+      "import { styles } from './styles';",
+      "",
+      "export function ${1}() {",
+      "  return (",
+      "    <View style={styles.container}>",
+      "",
+      "    </View>",
+      "  );",
+      "}"
+    ],
+    "description": "Create the structure of a React Native Component",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "StyleSheet React Native Object": {
+    "prefix": "rnso",
+    "body": [
+      "import { StyleSheet } from 'react-native';",
+      "",
+      "export const styles = StyleSheet.create({",
+      "  container: {}",
+      "});"
+    ],
+    "description": "Create a style object with Stylesheet on separate file.",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "React Native Styled Component": {
+    "prefix": "rnsc",
+    "body": [
+      "import React from 'react';",
+      "import { Container } from './styles';",
+      "",
+      "export function ${1}() {",
+      "  return (",
+      "    <Container>",
+      "",
+      "    </Container>",
+      "  );",
+      "}"
+    ],
+    "description": "Create the structure of a React Native with Styled Component",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "React Native Styled Component StyleSheet": {
+    "prefix": "rnscs",
+    "body": [
+      "import styled from 'styled-components/native';",
+      "",
+      "export const Container = styled.View`",
+      "  flex: 1;",
+      "`;"
+    ],
+    "description": "Create the structure of Styled Component StyleSheet",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "React Native Styled Component Color Theme": {
+    "prefix": "rnsctc",
+    "body": [
+      "${({ theme }) => theme.COLORS.};"
+    ],
+    "description": "Get the path to color theme props"
+  },
+  "React Native Styled Component Font Theme": {
+    "prefix": "rnsctf",
+    "body": [
+      "${({ theme }) => theme.FONTS.};"
+    ],
+    "description": "Create the path to color theme props",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "Native Base Componente": {
+    "prefix": "nbc",
+    "body": [
+      "import React from 'react';",
+      "import { VStack } from 'native-base';",
+      "",
+      "export function ${1}() {",
+      "  return (",
+      "    <VStack>",
+      "",
+      "    </VStack>",
+      "  );",
+      "}"
+    ],
+    "description": "Create Native Base Component",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "Either": {
+    "prefix": "either",
+    "body": [
+      "export class Left<L, A> {",
+      "  readonly value: L",
+      "",
+      "  constructor (value: L) {",
+      "    this.value = value",
+      "  }",
+      "",
+      "  isLeft (): this is Left<L, A> {",
+      "    return true",
+      "  }",
+      "",
+      "  isRight (): this is Right<L, A> {",
+      "    return false",
+      "  }",
+      "}",
+      "export class Right<L, A> {",
+      "  readonly value: A",
+      "",
+      "  constructor (value: A) {",
+      "    this.value = value",
+      "  }",
+      "",
+      "  isLeft (): this is Left<L, A> {",
+      "    return false",
+      "  }",
+      "",
+      "  isRight (): this is Right<L, A> {",
+      "    return true",
+      "  }",
+      "}",
+      "",
+      "export type Either<L, A> = Left<L, A> | Right<L, A>",
+      "",
+      "export const left = <L, A>(l: L): Either<L, A> => {",
+      "  return new Left<L, A>(l)",
+      "}",
+      "",
+      "export const right = <L, A>(a: A): Either<L, A> => {",
+      "  return new Right<L, A>(a)",
+      "}"
+    ],
+    "description": "Either para melhorar o tratamento de erros",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "Function ReactJS typescript": {
+    "prefix": "rfcee",
+    "body": [
+      "export function ${TM_FILENAME_BASE}() {",
+      "   return()",
+      "}"
+    ],
+    "description": "Create simple funciton in reactjs",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  }
+}
+          
