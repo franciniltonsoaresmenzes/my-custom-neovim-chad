@@ -76,13 +76,13 @@ local plugins = {
     end,
   },
 
-  {
-    "Pocco81/auto-save.nvim",
-    event = "BufReadPost",
-    config = function()
-      require "custom.configs.autosave"
-    end,
-  },
+  -- {
+  --   "Pocco81/auto-save.nvim",
+  --   event = "BufReadPost",
+  --   config = function()
+  --     require "custom.configs.autosave"
+  --   end,
+  -- },
   {
     "glepnir/lspsaga.nvim",
     event = "LspAttach",
@@ -107,6 +107,15 @@ local plugins = {
     end,
     -- Uncomment next line if you want to follow only stable versions
     -- version = "*" 
+  },
+
+  {
+    "NTBBloodbath/rest.nvim",
+    ft="http",
+    dependencies = "nvim-lua/plenary.nvim",
+    config = function()
+      require "custom.configs.rest"
+    end,
   },
 
   -- To make a plugin not be loaded

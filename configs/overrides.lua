@@ -7,9 +7,7 @@ M.treesitter = {
     "html",
     "css",
     "javascript",
-    "c",
     "markdown",
-    "markdown_inline",
   },
   indent = {
     enable = true,
@@ -39,7 +37,9 @@ M.nvimtree = {
   git = {
     enable = true,
   },
-
+  view ={
+    width = 81,
+  },
   renderer = {
     highlight_git = true,
     icons = {

@@ -31,6 +31,9 @@ M.lspsaga = {
 -- Defina um mapeamento de tecla para executar npx prisma format
 vim.api.nvim_set_keymap('n', '<F4>', [[<Cmd>lua vim.cmd('!npx prisma format')<CR>]], { noremap = true, silent = true })
 
+
+vim.api.nvim_set_keymap('n', '<leader>pr', '<cmd>lua require("rest-nvim").run()<CR>', { noremap = true, silent = true })
+
 -- Função para executar a implementação de interface usando o tsserver LSP
 
 
